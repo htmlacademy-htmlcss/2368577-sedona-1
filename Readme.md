@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Polina Goltsova](https://up.htmlacademy.ru/htmlcss-individual/1/user/2368577).
-* Наставник: `Неизвестно`.
+* Наставник: `Hello, World!` (https://htmlacademy.ru/profile/id17217).
 
 ---
 
