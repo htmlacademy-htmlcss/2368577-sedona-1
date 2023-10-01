@@ -82,9 +82,26 @@
               </li>
             </ul>
           </fieldset>
-
           <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Тип Жилья:</legend>
+          <ul class="catalog-filter-list">
+            <li class="catalog-filter-title">
+              <label class="control">
+                <input class="control-input" type="radio" name="catalog-group" value="hotel" checked>Гостиница
+              </label>
+            </li>
+            <li class="catalog-filter-title">
+              <label class="control">
+                <input class="control-input" type="radio" name="catalog-group" value="motel" >Мотель
+              </label>
+            </li>
+            <li class="catalog-filter-title">
+              <label class="control">
+                <input class="control-input" type="radio" name="catalog-group" value="apartments">Апартаменты
+              </label>
+            </li>
+          </ul>
+
         </fieldset>
 
         <fieldset class="catalog-filter-group">
@@ -92,7 +109,7 @@
         </fieldset>
 
           <button class="button" type="submit">Применить</button>
-          <button class="button" type="submit">Сбросить</button>
+          <button class="button" type="reset">Сбросить</button>
         </form>
       </section>
     </main>
