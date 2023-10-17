@@ -8,7 +8,7 @@
   <body>
     <header class="page-header">
       <nav class="navigation">
-        <a href="#" class="navigation-link">
+        <a href="#" class="navigation-link navigation-logo">
           <img class="logo" src="images/logo_sedona.svg" alt="логотип Седоны" width="140" height="70">
         </a>
         <ul class="navigation-list">
@@ -19,10 +19,10 @@
             <a href="#" class="navigation-link">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a href="#" class="navigation-link">Гостиницы</a>
+           <a href="#" class="navigation-link">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-user">
+        <ul class="navigation-list navigation-user">
           <li class="navigation-item">
             <a href="#" class="navigation-link">
               <img class="navigation-icon" src="images/search_icon.svg" alt="иконка поиска" width="19" height="19">
@@ -46,17 +46,22 @@
         </ul>
       </nav>
     </header>
-    <main class="main-index">
-      <h1 class="visually-hidden">Город Седона</h1>
+    <!-- есть ли разница, добавляю я новый класс перед или после уже заданного? мне нужно добавить main-container. Есть ли отличия между: <main class=" main-container main-index"> и <main class="main-index main-container">  -->
+    <main class="main-index main-container">
+      <div class="page-container">
+      <h1 class="visually-hidden" hidden>Город Седона</h1>
       <div>
             <img src="images/welcome_text.svg" class="Welcome-sedona" width="458" height="352" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
       </div>
       <section class="text-section">
-        <h2 class="main-text">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <div class="text-section-container">
+          <!-- почему текст, который ниже, на странице наезжает на картинку url("../images/main_image.jpg")? -->
+        <h2 class="main-text ">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="under-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+        </div>
       </section>
       <section class="advantages">
-        <h2 class="visually-hidden">Преимущества</h2>
+        <h2 class="visually-hidden" hidden>Преимущества</h2>
         <ul class="advantages-list">
           <li class="advantages-item">
             <div class="blue-colored">
@@ -93,8 +98,10 @@
           </ul>
           </section>
           <section class="text-section">
+            <div class="text-section-container">
             <h2 class="main-text">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
             <p class="under-text">Опытный персонал и качественное обслуживание!</p>
+            </div>
           </section>
           <section class="service">
             <ul class="service-list">
@@ -117,11 +124,16 @@
             </ul>
             </section>
             <section class="text-section">
+              <div class="text-section-container">
               <h2 class="main-text">Заинтересовались?</h2>
               <p class="under-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
               <a class="button" href="catalog.html">Поиск гостицины в седоне</a>
+             </div>
+
             </section>
-            <section class="newsletter-with-background">
+
+            <section class="newsletter-with-background text-section">
+              <div class="text-section-container">
               <h2 class="main-text">Подпишитесь на рассылку</h2>
               <p class="under-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
               <form action="https://echo.htmlacademy.ru/" class="newsletter-form" method="post">
@@ -129,12 +141,14 @@
                 <input type="email" id="email-form" placeholder="Ваш e-mail">
                 <button class="button-blue" name="subscribe">Подписаться</button></p>
               </form>
+            </div>
             </section>
+          </div>
     </main>
     <footer class="page-footer">
-
+      <div class="page-footer-container">
       <section class="footer-social">
-        <h2 class="visually-hidden">Блок социальных сетей</h2>
+        <h2 class="visually-hidden" hidden>Блок социальных сетей</h2>
         <ul class="footer-social-list">
             <li class="footer-social-item">
               <a class="social-media" href="https://vk.com/htmlacademy">
@@ -155,13 +169,18 @@
               </a>
             </li>
           </ul>
+          <div class="footer-telefon-number-container">
           <a class="footer-telefon-number" href="tel:+78128121212">+7 (812) 812-12-12
-            <span class="visually-hidden>">номер телефона</span>
+            <span class="visually-hidden" hidden>номер телефона</span>
           </a>
+        </div>
+        <div class="footer-logo-container">
           <a class="footer-logo" href="https://htmlacademy.ru/">
             <img src="images/html_academy_logo.svg" width="115" height="34" alt="логотип html academy">
           </a>
+        </div>
         </section>
+        </div>
     </footer>
   </body>
 </html>
