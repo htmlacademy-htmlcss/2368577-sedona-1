@@ -203,6 +203,8 @@ margin: 0 auto;
 
 .advantages-list{
   display: flex;
+  /* flex-wrap: wrap;
+  align-content: stretch; - почему с помощью этих правил не получается расположить блоки в 3 ряда? */
   margin: 0;
   padding: 0;
   flex-direction: column;
@@ -284,7 +286,7 @@ margin: 0 auto;
   text-align: center;
 }
 
-/* у меня не получилось расположить компоненты по краям футера, почему-то они сгруппировалисб в центре. */
+/* у меня не получилось расположить компоненты по краям футера, почему они сгруппировались в центре? */
 .page-footer-container{
   display: flex;
   width: 1200px;
@@ -320,6 +322,8 @@ margin-right: 41px;
   text-decoration: none;
 }
 
+/* calatog.html */
+
 .main-inner {
   background-image: url("../images/blured_image_catalog.jpg");
   color: #000;
@@ -328,11 +332,19 @@ margin-right: 41px;
   background-repeat: no-repeat;
 }
 
+.inner-header{
+  display: flex;
+  width: 1200px;
+  padding: 0 70px;
+  flex-direction: column;
+}
+
 .inner-header-title{
   color: #fff;
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
+  margin: 0;
 }
 
 .breadcrumbs-link{
@@ -340,6 +352,53 @@ margin-right: 41px;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
+  margin: 0;
+}
+
+.breadcrumbs{
+  margin: 0;
+}
+
+/* почему компоненты ниже не встают в линию, хотя я задаю значение flex-direction: row; ?  */
+.catalog-filters {
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  padding: 0 70px;
+}
+
+.infrastructure {
+  width: 150px;
+  margin-right: 70px;
+}
+
+.housing-type {
+  width: 150px;
+  margin-right: 140px;
+}
+
+.price {
+  width: 288px;
+  margin-right: 70px;
+}
+
+.buttons {
+  width: 191px;
+  margin-left: auto;
+}
+
+.product-card-select-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card-select-section-preview{
+  width: 1060px;
+}
+
+.product-list{
+  width: 1060px;
+  list-style-type: none;
 }
 
 .catalog-filter-title {
@@ -409,6 +468,8 @@ margin-right: 41px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  width: 1060px;
+  list-style-type: none;
 }
 
 .pagination-link {
