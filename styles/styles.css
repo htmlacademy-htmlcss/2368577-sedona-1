@@ -132,9 +132,7 @@ body {
   color: #000;
 }
 
-.main-container {
-  flex-grow: 1;
-}
+
 
 .main-index {
   background-image: url("../images/main_image.jpg");
@@ -142,7 +140,10 @@ body {
   color: #000;
   background-color: #FFF;
   background-size: 100%;
+}
 
+.main-container {
+  flex-grow: 1;
 }
 
 .page-container{
@@ -207,8 +208,8 @@ margin: 0 auto;
   align-content: stretch; - почему с помощью этих правил не получается расположить блоки в 3 ряда? */
   margin: 0;
   padding: 0;
-  flex-direction: column;
   list-style-type:none;
+  flex-wrap: wrap;
 
 }
 
@@ -360,31 +361,45 @@ margin-right: 41px;
 }
 
 /* почему компоненты ниже не встают в линию, хотя я задаю значение flex-direction: row; ?  */
-.catalog-filters {
+/* .catalog-filters {
+
+} */
+
+.catalog-filter {
   display: flex;
-  flex-direction: row;
   width: 1200px;
   padding: 0 70px;
+
+}
+
+.catalog-filter-group {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .infrastructure {
   width: 150px;
   margin-right: 70px;
+  border: 0;
 }
 
 .housing-type {
   width: 150px;
   margin-right: 140px;
+  border: 0;
 }
 
 .price {
   width: 288px;
   margin-right: 70px;
+  border: 0;
 }
 
 .buttons {
   width: 191px;
   margin-left: auto;
+
 }
 
 .product-card-select-section {
