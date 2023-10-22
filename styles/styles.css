@@ -22,13 +22,9 @@ html {
   box-sizing: border-box;
 }
 
-/* почему мы задаем display: flex; сразу на body, а не отдельным тегам, например header, main и тд?   */
 body {
   width: 1200px;
   margin: 0 auto;
-  /* display: flex;
-  flex-direction: column; */
-  /* не понимаю, зачем мы добавили: min-height: 100%; Что это дает?  */
   min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -91,7 +87,6 @@ body {
   width: 44px;
   padding: 22px 12px;
   display: inline-block;
-  /* position: relative; */
 }
 
 .navigation-item-button {
@@ -190,15 +185,6 @@ body {
 }
 
 
-
-/* .main-index {
-  background-image: url("../images/main_image.jpg");
-  background-repeat: no-repeat;
-  color: #000;
-  background-color: #FFF;
-  background-size: 100%;
-} */
-
 .welcome {
   background-image: url("../images/main_image.jpg");
   background-repeat: no-repeat;
@@ -214,10 +200,7 @@ body {
   flex-grow: 1;
 }
 
-.page-container{
-width: 1200px;
-margin: 0 auto;
-}
+
 
 .Welcome-sedona{
   display: block;
@@ -378,7 +361,6 @@ margin: 0 auto;
   width: 1200px;
   padding: 0;
 
-  /* padding: 81px 85px; */
 }
 
 .service-item{
@@ -420,7 +402,7 @@ margin: 0 auto;
   background-repeat: no-repeat;
   color: #000;
   background-color: #fff;
-  /* background-size: 100% auto; - что означает это правило? */
+  background-size: 100% auto;
   text-align: center;
   width: 1200px;
 }
@@ -495,18 +477,18 @@ margin: 0 auto;
 
 /* calatog.html */
 
-.main-inner {
+.filter-wrapper {
   background-image: url("../images/blured_image_catalog.jpg");
   color: #000;
   background-color: #fff;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  padding: 35px 70px 70px;
 }
 
 .inner-header{
   display: flex;
   width: 1200px;
-  padding: 0 70px;
   flex-direction: column;
 }
 
@@ -516,6 +498,7 @@ margin: 0 auto;
   font-weight: 700;
   line-height: 78px;
   margin: 0;
+  margin-bottom: 8px;
 }
 
 .breadcrumbs-link{
@@ -527,18 +510,18 @@ margin: 0 auto;
 }
 
 .breadcrumbs{
+  display: flex;
+  min-width: 114px;
   margin: 0;
+  margin-bottom: 40px;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
 }
 
-/* почему компоненты ниже не встают в линию, хотя я задаю значение flex-direction: row; ?  */
-/* .catalog-filters {
-
-} */
 
 .catalog-filter {
   display: flex;
-  width: 1200px;
-  padding: 0 70px;
 
 }
 
@@ -554,6 +537,8 @@ margin: 0 auto;
   border: 0;
 }
 
+
+
 .housing-type {
   width: 150px;
   margin-right: 140px;
@@ -566,24 +551,58 @@ margin: 0 auto;
   border: 0;
 }
 
-.buttons {
-  width: 191px;
-  margin-left: auto;
+.control-range{
+  display: flex;
+  margin-bottom: 36px;
 
 }
 
-.product-card-select-section {
+.control-from{
+  width: 143px;
+  margin-right: 2px;
+}
+
+.control-to{
+  width: 143px;
+
+}
+
+.buttons {
   display: flex;
   flex-direction: column;
+  width: 191px;
+  margin-left: auto;
+  padding-top: 56px;
+  text-align: center;
+}
+
+.button-blue-filters{
+  padding: 8px 50px;
+  margin-bottom: 32px;
+}
+
+.button-no-color-filters{
+  padding: 8px 50px;
+}
+
+.product-card-select-section-preview {
+  display: flex;
+  padding: 50px 70px 0;
+  margin-bottom: 40px;
 }
 
 .product-card-select-section-preview{
-  width: 1060px;
+  width: 1200px;
 }
 
 .product-list{
-  width: 1060px;
+  display: flex;
+  margin: 0;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
   list-style-type: none;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .catalog-filter-title {
@@ -592,6 +611,7 @@ margin: 0 auto;
   font-weight: 700;
   line-height: 24px;
   text-transform: capitalize;
+  margin-bottom: 32px;
 }
 
 .catalog-filter-list{
@@ -599,14 +619,20 @@ margin: 0 auto;
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
+  margin-bottom: 16px;
+}
+
+.catalog-filter-list:last-child{
+  margin-bottom: 0;
 }
 
 .select-section-results {
   color: #000;
   font-size: 30px;
   font-weight: 700;
-  line-height: 36px; /* 120% */
+  line-height: 36px;
   text-transform: uppercase;
+  margin-right: 200px;
 }
 
 .product-card-select-section-preview{
@@ -620,13 +646,45 @@ margin: 0 auto;
 .select-section-control{
   border-radius: 4px;
   border: 2px solid #E5E5E5;
+  width: 292px;
+  margin-right: 70px;
 }
+
+.product-card-select-view {
+  display: flex;
+  width: 160px;
+  margin-left: auto;
+  justify-content:space-between;
+
+}
+
+.product-card{
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  padding: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  border-color: lightgrey;
+}
+
+.product-card:nth-child(3){
+  margin-right: 0;
+}
+
+.product-card-link {
+  margin-bottom: 16px;
+}
+
 
 .product-card-title{
   color: #000;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
+  margin: 0;
+  margin-bottom: 16px;
 }
 
 .product-card-description{
@@ -634,6 +692,14 @@ margin: 0 auto;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.product-card-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .product-card-rating{
@@ -645,22 +711,49 @@ margin: 0 auto;
   line-height: 20px;
   text-transform: uppercase;
   background-repeat: no-repeat;
+  margin: 0;
+  width: 140px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.product-card-buttons-size {
+ width: 140px;
+ padding-top: 8px;
+ padding-bottom: 8px;
+ margin-bottom: 16px;
 }
 
 .pagination{
+  display: flex;
   text-align: center;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-  width: 1060px;
+  width: 1200px;
   list-style-type: none;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-top: 40px;
+  margin-bottom: 60px;
 }
 
+/* как сделать так, чтобы все кнопки пагинации были квадратные? сейчас у них разные паддинги в зависимости от числа. Или нужно каждой кнопке задавать паддинг? */
 .pagination-link {
   background-color: #82B3D3;
   color: #FFF;
   text-decoration: none;
+  padding: 12px 25px 13px 25px ;
+}
+
+.pagination-link-no-color {
+  background-color: #FFF;
+  color: #000;
+}
+
+.pagination-item {
+  margin-right: 8px;
 }
 
 .pagination-current {
@@ -687,23 +780,49 @@ margin: 0 auto;
   background-position: center 81px;
 }
 
+/* почему иконка домика в хлебных крошках черная, хотя задан белый цвет? Почему она не встает по центру (для breadcrumps я указала text-align - center)?*/
 .breadcrumbs-image{
   background-image: url("../images/homepage_icon.svg");
   background-repeat: no-repeat;
-  fill: #FFF;
+  color: #FFF;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  display: inline-block;
+  width: 13px;
+  height: 15px;
+  margin-right: 28px;
 }
 
+.control-input {
+margin: 0;
+margin-right: 16px;
+text-align: center;
+}
+
+/* как расположить иконки в центре? */
 .button-catalog-image1 {
   background-image: url("../images/filter1_icon.svg");
   background-repeat: no-repeat;
+  display: block;
+  width: 48px;
+  height: 48px;
+
 }
 
 .button-catalog-image2 {
   background-image: url("../images/filter2_icon.svg");
   background-repeat: no-repeat;
+  display: block;
+  width: 48px;
+  height: 48px;
+
 }
 
 .button-catalog-image3 {
   background-image: url("../images/filter3_icon.svg");
   background-repeat: no-repeat;
+  display: block;
+  width: 48px;
+  height: 48px;
+
 }
