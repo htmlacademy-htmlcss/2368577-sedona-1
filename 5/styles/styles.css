@@ -17,12 +17,14 @@
 html {
   height: 100%;
 }
-/* почему мы задаем display: flex; сразу на body, а не отдельным тегам, например header, main и тд?   */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  /* не понимаю, зачем мы добавили: min-height: 100%; Что это дает?  */
+  width: 1200px;
+  margin: 0 auto;
   min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -30,6 +32,8 @@ body {
   background-color: #FFF;
   color: #000;
 }
+
+
 
 .navigation {
   display: flex;
@@ -40,10 +44,12 @@ body {
 }
 
 .navigation-list {
+  display: flex;
   width: 339px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  align-items: center;
 }
 
 .navigation-user {
@@ -55,7 +61,10 @@ body {
 .navigation-logo{
   width: 138px;
   margin-right: 30px;
+
 }
+
+
 
 .navigation-link {
   font-size: 20px;
@@ -65,7 +74,35 @@ body {
   text-align: center;
   text-decoration: none;
   color: #000;
+  position: relative;
+
 }
+
+.navigation-link-list{
+  padding: 20px 16px;
+  display: inline-block;
+}
+
+.navigation-link-user {
+  width: 44px;
+  padding: 22px 12px;
+  display: inline-block;
+}
+
+.navigation-item-button {
+  width: 180px;
+  padding: 14px 0 14px 20px;
+
+}
+
+.navigation-button{
+  display: inline-block;
+  padding: 8px 34px;
+  width: 160px;
+
+}
+
+
 
 .favorites-number {
   color: #FFF;
@@ -75,6 +112,7 @@ body {
   line-height: 10px;
   background-color: #7DB54F;
   border-radius: 10px;
+  position: absolute;
 }
 
 .button{
@@ -99,6 +137,20 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   border: none;
+}
+
+.newsletter-form {
+  display: flex;
+
+}
+
+.button-blue-newsletter {
+  width: 232px;
+  padding: 8px 50px;
+}
+
+.input-newsletter{
+  width: 452px;
 }
 
 .button-green{
@@ -132,32 +184,54 @@ body {
   color: #000;
 }
 
+
+.welcome {
+  background-image: url("../images/main_image.jpg");
+  background-repeat: no-repeat;
+  background-color: #FFF;
+  color: #000;
+  background-size: 100%;
+  padding: 51px 371px 82px;
+}
+
+
+
 .main-container {
   flex-grow: 1;
 }
 
-.main-index {
-  background-image: url("../images/main_image.jpg");
-  background-repeat: no-repeat;
-  color: #000;
-  background-color: #FFF;
-  background-size: 100%;
 
-}
-
-.page-container{
-width: 1200px;
-margin: 0 auto;
-}
 
 .Welcome-sedona{
   display: block;
   margin: 0 auto;
 }
 
-.text-section-container{
+.text-section-container-advantages{
   margin: 0 auto;
-  padding: 0;
+  padding-top: 69px;
+  padding-bottom: 69px;
+  width: 685px;
+}
+
+.text-section-container-service{
+  margin: 0 auto;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  width: 685px;
+}
+
+.text-section-container-search{
+  margin: 0 auto;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  width: 685px;
+}
+
+.text-section-container-newsletter{
+  margin: 0 auto;
+  padding-top: 96px;
+  padding-bottom: 104px;
   width: 685px;
 }
 
@@ -176,7 +250,11 @@ margin: 0 auto;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 25px;
 }
+
+
 
 .under-text {
   color: #333;
@@ -184,6 +262,17 @@ margin: 0 auto;
   font-size: 22px;
   font-weight: 400;
   line-height: 26px;
+  margin: 0;
+}
+
+.under-text-search, .under-text-newsletter {
+  margin-bottom: 54px;
+}
+
+.text-section-button{
+  display: inline-block;
+  width: 376px;
+  padding: 8px 50px;
 }
 
 .newsletter-with-background .main-text,
@@ -199,23 +288,44 @@ margin: 0 auto;
   line-height: 28px;
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: 62px;
+  padding-left: 27.5px;
+  padding-right: 27.5px;
 }
 
 .advantages-list{
   display: flex;
-  /* flex-wrap: wrap;
-  align-content: stretch; - почему с помощью этих правил не получается расположить блоки в 3 ряда? */
+  align-content: stretch;
   margin: 0;
   padding: 0;
-  flex-direction: column;
   list-style-type:none;
+  flex-wrap: wrap;
+
 
 }
 
 .advantages-item{
   margin: 0;
-  padding: 0;
   width: 400px;
+  display: flex;
+
+
+}
+
+.blue-colored {
+  padding: 102px 85px;
+}
+
+.light-blue-colored, .gray-colored {
+  padding: 112.5px 85px;
+
+}
+
+
+
+.advantages-item-large {
+  width: 1200px;
+  display: flex;
 }
 
 .advantages-description {
@@ -248,11 +358,22 @@ margin: 0 auto;
   display: flex;
   margin: 0 auto;
   list-style-type:none;
+  width: 1200px;
+  padding: 0;
+
 }
 
 .service-item{
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 183px 85px 81px;
+  background-color: rgba(131, 179, 211, 0.20)
 
+}
+
+.service-item-no-color{
+  background-color: #FFF;
 }
 
 .service-title {
@@ -262,6 +383,9 @@ margin: 0 auto;
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
+
 }
 
 .service-description {
@@ -270,6 +394,7 @@ margin: 0 auto;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
+  margin: 0;
 }
 
 .newsletter-with-background {
@@ -277,7 +402,7 @@ margin: 0 auto;
   background-repeat: no-repeat;
   color: #000;
   background-color: #fff;
-  /* background-size: 100% auto; - что означает это правило? */
+  background-size: 100% auto;
   text-align: center;
   width: 1200px;
 }
@@ -286,7 +411,6 @@ margin: 0 auto;
   text-align: center;
 }
 
-/* у меня не получилось расположить компоненты по краям футера, почему они сгруппировались в центре? */
 .page-footer-container{
   display: flex;
   width: 1200px;
@@ -294,21 +418,50 @@ margin: 0 auto;
   padding: 0 70px;
 }
 
-.footer-social-list {
+.footer-social {
   width: 142px;
-  margin-right: 41px;
-  list-style-type:none;
+  margin-right: 42px;
+  align-items: center;
+  padding-top: 45px;
+  padding-bottom: 35px;
+}
+
+.footer-social-list{
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0
+  ;
+}
+
+.footer-social-item-vk{
+  padding: 13px 12px;
+}
+
+.footer-social-item-tg{
+  padding: 12px 15px;
+}
+
+.footer-social-item-yt {
+  padding: 12px 13px;
 }
 
 .footer-telefon-number-container {
-width: 720px;
-margin-right: 41px;
+  width: 720px;
+  padding: 45px 194px 35px 195px;
+  position: relative;
 }
 
-.footer-logo-container{
-  width: 115px;
-  margin-left: auto;
+
+.footer-logo-container {
+  width: 156px;
+  display: flex;
+  align-items: center;
+  padding: 8px 0 8px 41px;
 }
+
+
 
 
 
@@ -324,18 +477,18 @@ margin-right: 41px;
 
 /* calatog.html */
 
-.main-inner {
+.filter-wrapper {
   background-image: url("../images/blured_image_catalog.jpg");
   color: #000;
   background-color: #fff;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  padding: 35px 70px 70px;
 }
 
 .inner-header{
   display: flex;
   width: 1200px;
-  padding: 0 70px;
   flex-direction: column;
 }
 
@@ -345,6 +498,7 @@ margin-right: 41px;
   font-weight: 700;
   line-height: 78px;
   margin: 0;
+  margin-bottom: 8px;
 }
 
 .breadcrumbs-link{
@@ -356,49 +510,99 @@ margin-right: 41px;
 }
 
 .breadcrumbs{
+  display: flex;
+  min-width: 114px;
   margin: 0;
+  margin-bottom: 40px;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
 }
 
-/* почему компоненты ниже не встают в линию, хотя я задаю значение flex-direction: row; ?  */
-.catalog-filters {
+
+.catalog-filter {
   display: flex;
-  flex-direction: row;
-  width: 1200px;
-  padding: 0 70px;
+
+}
+
+.catalog-filter-group {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .infrastructure {
   width: 150px;
   margin-right: 70px;
+  border: 0;
 }
+
+
 
 .housing-type {
   width: 150px;
   margin-right: 140px;
+  border: 0;
 }
 
 .price {
   width: 288px;
   margin-right: 70px;
+  border: 0;
+}
+
+.control-range{
+  display: flex;
+  margin-bottom: 36px;
+
+}
+
+.control-from{
+  width: 143px;
+  margin-right: 2px;
+}
+
+.control-to{
+  width: 143px;
+
 }
 
 .buttons {
-  width: 191px;
-  margin-left: auto;
-}
-
-.product-card-select-section {
   display: flex;
   flex-direction: column;
+  width: 191px;
+  margin-left: auto;
+  padding-top: 56px;
+  text-align: center;
+}
+
+.button-blue-filters{
+  padding: 8px 50px;
+  margin-bottom: 32px;
+}
+
+.button-no-color-filters{
+  padding: 8px 50px;
+}
+
+.product-card-select-section-preview {
+  display: flex;
+  padding: 50px 70px 0;
+  margin-bottom: 40px;
 }
 
 .product-card-select-section-preview{
-  width: 1060px;
+  width: 1200px;
 }
 
 .product-list{
-  width: 1060px;
+  display: flex;
+  margin: 0;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
   list-style-type: none;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .catalog-filter-title {
@@ -407,6 +611,7 @@ margin-right: 41px;
   font-weight: 700;
   line-height: 24px;
   text-transform: capitalize;
+  margin-bottom: 32px;
 }
 
 .catalog-filter-list{
@@ -414,14 +619,20 @@ margin-right: 41px;
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
+  margin-bottom: 16px;
+}
+
+.catalog-filter-list:last-child{
+  margin-bottom: 0;
 }
 
 .select-section-results {
   color: #000;
   font-size: 30px;
   font-weight: 700;
-  line-height: 36px; /* 120% */
+  line-height: 36px;
   text-transform: uppercase;
+  margin-right: 200px;
 }
 
 .product-card-select-section-preview{
@@ -435,13 +646,45 @@ margin-right: 41px;
 .select-section-control{
   border-radius: 4px;
   border: 2px solid #E5E5E5;
+  width: 292px;
+  margin-right: 70px;
 }
+
+.product-card-select-view {
+  display: flex;
+  width: 160px;
+  margin-left: auto;
+  justify-content:space-between;
+
+}
+
+.product-card{
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  padding: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  border-color: lightgrey;
+}
+
+.product-card:nth-child(3){
+  margin-right: 0;
+}
+
+.product-card-link {
+  margin-bottom: 16px;
+}
+
 
 .product-card-title{
   color: #000;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
+  margin: 0;
+  margin-bottom: 16px;
 }
 
 .product-card-description{
@@ -449,6 +692,14 @@ margin-right: 41px;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.product-card-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .product-card-rating{
@@ -460,22 +711,49 @@ margin-right: 41px;
   line-height: 20px;
   text-transform: uppercase;
   background-repeat: no-repeat;
+  margin: 0;
+  width: 140px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.product-card-buttons-size {
+ width: 140px;
+ padding-top: 8px;
+ padding-bottom: 8px;
+ margin-bottom: 16px;
 }
 
 .pagination{
+  display: flex;
   text-align: center;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-  width: 1060px;
+  width: 1200px;
   list-style-type: none;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-top: 40px;
+  margin-bottom: 60px;
 }
 
+/* как сделать так, чтобы все кнопки пагинации были квадратные? сейчас у них разные паддинги в зависимости от числа. Или нужно каждой кнопке задавать паддинг? */
 .pagination-link {
   background-color: #82B3D3;
   color: #FFF;
   text-decoration: none;
+  padding: 12px 25px 13px 25px ;
+}
+
+.pagination-link-no-color {
+  background-color: #FFF;
+  color: #000;
+}
+
+.pagination-item {
+  margin-right: 8px;
 }
 
 .pagination-current {
@@ -487,38 +765,64 @@ margin-right: 41px;
 .service-image-house{
   background-image: url("../images/house_icon.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 81px;
 }
 
 .service-image-burger{
   background-image: url("../images/burger_icon.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 81px;
 }
 
 .service-image-gift{
   background-image: url("../images/gift_icon.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 81px;
 }
 
+/* почему иконка домика в хлебных крошках черная, хотя задан белый цвет? Почему она не встает по центру (для breadcrumps я указала text-align - center)?*/
 .breadcrumbs-image{
   background-image: url("../images/homepage_icon.svg");
   background-repeat: no-repeat;
-  fill: #FFF;
+  color: #FFF;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  display: inline-block;
+  width: 13px;
+  height: 15px;
+  margin-right: 28px;
 }
 
+.control-input {
+margin: 0;
+margin-right: 16px;
+text-align: center;
+}
+
+/* как расположить иконки в центре? */
 .button-catalog-image1 {
   background-image: url("../images/filter1_icon.svg");
   background-repeat: no-repeat;
+  display: block;
+  width: 48px;
+  height: 48px;
+
 }
 
 .button-catalog-image2 {
   background-image: url("../images/filter2_icon.svg");
   background-repeat: no-repeat;
+  display: block;
+  width: 48px;
+  height: 48px;
+
 }
 
 .button-catalog-image3 {
   background-image: url("../images/filter3_icon.svg");
   background-repeat: no-repeat;
+  display: block;
+  width: 48px;
+  height: 48px;
+
 }
