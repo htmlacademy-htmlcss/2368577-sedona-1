@@ -33,7 +33,16 @@ body {
   color: #000;
 }
 
-
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 .navigation {
   display: flex;
@@ -45,6 +54,7 @@ body {
 
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   width: 339px;
   margin: 0;
   padding: 0;
@@ -75,6 +85,7 @@ body {
   text-decoration: none;
   color: #000;
   position: relative;
+
 
 }
 
@@ -428,24 +439,25 @@ body {
 
 .footer-social-list{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   list-style-type: none;
   padding: 0;
-  margin: 0
-  ;
+  margin: 0;
 }
 
-.footer-social-item-vk{
-  padding: 13px 12px;
+.footer-social-item {
+  display: flex;
+  width: 47px;
+  height: 40px;
+  text-align: center;
 }
 
-.footer-social-item-tg{
-  padding: 12px 15px;
+.social-media {
+
+  padding: 11px 12px;
 }
 
-.footer-social-item-yt {
-  padding: 12px 13px;
-}
 
 .footer-telefon-number-container {
   width: 720px;
@@ -507,6 +519,11 @@ body {
   font-weight: 400;
   line-height: 21px;
   margin: 0;
+  padding: 0;
+  align-self: center;
+  margin-right: 28px;
+
+
 }
 
 .breadcrumbs{
@@ -669,7 +686,7 @@ body {
   border-color: lightgrey;
 }
 
-.product-card:nth-child(3){
+.product-card:nth-child(3n){
   margin-right: 0;
 }
 
@@ -739,12 +756,17 @@ body {
   margin-bottom: 60px;
 }
 
-/* как сделать так, чтобы все кнопки пагинации были квадратные? сейчас у них разные паддинги в зависимости от числа. Или нужно каждой кнопке задавать паддинг? */
 .pagination-link {
   background-color: #82B3D3;
   color: #FFF;
   text-decoration: none;
-  padding: 12px 25px 13px 25px ;
+  display: block;
+  width: 60px ;
+  height: 60px ;
+  padding: 12px 19px;
+  text-align: center;
+  /* margin-right: 8px;; */
+
 }
 
 .pagination-link-no-color {
@@ -785,13 +807,17 @@ body {
   background-image: url("../images/homepage_icon.svg");
   background-repeat: no-repeat;
   color: #FFF;
-  padding-top: 3px;
-  padding-bottom: 3px;
   display: inline-block;
   width: 13px;
   height: 15px;
-  margin-right: 28px;
+  background-position: bottom;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
+
+
+
+
 
 .control-input {
 margin: 0;
@@ -806,6 +832,7 @@ text-align: center;
   display: block;
   width: 48px;
   height: 48px;
+  background-position: center;
 
 }
 
@@ -815,6 +842,7 @@ text-align: center;
   display: block;
   width: 48px;
   height: 48px;
+  background-position: center;
 
 }
 
@@ -824,5 +852,6 @@ text-align: center;
   display: block;
   width: 48px;
   height: 48px;
+  background-position: center;
 
 }
