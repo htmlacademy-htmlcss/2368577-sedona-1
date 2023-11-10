@@ -115,6 +115,10 @@ body {
 
 }
 
+.navigation-icon {
+  display: block;
+}
+
 
 
 .favorites-number {
@@ -430,6 +434,7 @@ body {
   width: 1200px;
   margin: 0 auto;
   padding: 0 70px;
+  align-items: center;
 }
 
 .footer-social {
@@ -457,7 +462,7 @@ body {
 }
 
 .social-media {
-
+  display: flex;
   padding: 11px 12px;
 }
 
@@ -475,6 +480,14 @@ body {
   align-items: center;
   padding: 8px 0 8px 41px;
 }
+
+.footer-logo-image {
+  display: block;
+}
+
+
+
+
 
 
 
@@ -708,13 +721,27 @@ body {
   margin-bottom: 16px;
 }
 
-.product-card-description{
+.product-card-description-type{
   color: #333;
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
   margin: 0;
   margin-bottom: 16px;
+}
+
+.product-card-description-price{
+  color: #333;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.product-card-description {
+  display: flex;
+  justify-content: space-between;
 }
 
 .product-card-buttons {
