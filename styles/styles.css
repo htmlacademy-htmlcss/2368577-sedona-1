@@ -75,6 +75,11 @@ body {
 
 }
 
+.logo {
+margin-bottom: -6px;
+
+}
+
 
 
 .navigation-link {
@@ -86,6 +91,17 @@ body {
   text-decoration: none;
   color: #000;
   position: relative;
+}
+
+.navigation-link-current::after {
+  position: absolute;
+  content: "";
+  width: auto;
+  height: 2px;
+  background-color: #756257;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
 
 
 
@@ -100,7 +116,13 @@ body {
   width: 44px;
   padding: 22px 12px;
   display: inline-block;
+  position: relative;
+
 }
+
+/* .navigation-link .navigation-link-user .favorites {
+  position: relative;
+} */
 
 .navigation-item-button {
   width: 180px;
@@ -129,7 +151,14 @@ body {
   line-height: 10px;
   background-color: #7DB54F;
   border-radius: 10px;
+  width: 20px;
+  height: 20px;
   position: absolute;
+  top: -35%;
+  right: 0;
+  bottom: 0;
+  left: 45%;
+  margin: auto;
 }
 
 .button{
@@ -142,6 +171,12 @@ body {
   background-color: #756157;
   border: none;
   text-decoration: none;
+  border-radius: 4px;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 .button-blue {
@@ -215,8 +250,8 @@ body {
 
 .main-container {
   flex-grow: 1;
-}
 
+}
 
 
 .Welcome-sedona{
@@ -288,7 +323,6 @@ body {
 
 .text-section-button{
   display: inline-block;
-  width: 376px;
   padding: 8px 50px;
 }
 
@@ -308,6 +342,29 @@ body {
   margin-bottom: 62px;
   padding-left: 27.5px;
   padding-right: 27.5px;
+  position: relative;
+}
+
+.advantages-title::after {
+position: absolute;
+content: "";
+width: 60px;
+height: 2px;
+background-color: rgba(255, 255, 255, 0.30);
+bottom: -35px;
+left: 50%;
+margin-left: -30px;
+}
+
+.light-colored::after {
+position: absolute;
+content: "";
+width: 60px;
+height: 2px;
+background-color: rgba(0, 0, 0, 0.30);
+bottom: -35px;
+left: 50%;
+margin-left: -30px;
 }
 
 .advantages-list{
@@ -529,6 +586,18 @@ body {
   margin-bottom: 8px;
 }
 
+
+
+.breadcrumbs{
+  display: flex;
+  min-width: 114px;
+  margin: 0;
+  margin-bottom: 40px;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+}
+
 .breadcrumbs-link{
   color: #FFF;
   font-size: 16px;
@@ -538,20 +607,26 @@ body {
   padding: 0;
   align-self: center;
   margin-right: 28px;
-
-
 }
 
-.breadcrumbs{
-  display: flex;
-  min-width: 114px;
-  margin: 0;
-  margin-bottom: 40px;
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
+.breadcrumbs-item{
+  position: relative;
 }
 
+.breadcrumbs-item::after{
+  position: absolute;
+  content: "";
+  background-image: url("../images/right_arrow_icon.svg");
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 11px;
+  top: 0;
+  right: 10px;
+}
+
+.breadcrumbs-item:last-child:after{
+  content: none;
+}
 
 .catalog-filter {
   display: flex;
@@ -698,7 +773,7 @@ body {
   flex-wrap: wrap;
   width: 340px;
   padding: 20px;
-
+  border-radius: 4px;
   border: 1px solid;
   border-color: lightgrey;
 }
@@ -763,6 +838,21 @@ body {
   width: 140px;
   padding-top: 8px;
   padding-bottom: 8px;
+  border-radius: 4px;
+  position: relative;
+  margin-left: auto;
+}
+
+.product-card-rating::before{
+position: absolute;
+content: "";
+background-image: url("../images/star_icon.svg");
+background-repeat: no-repeat;
+width: 18px;
+height: 17px;
+left: -160px;
+margin-right: 6px;
+
 }
 
 .product-card-buttons-size {
@@ -783,9 +873,21 @@ body {
   list-style-type: none;
   padding-left: 70px;
   padding-right: 70px;
-  margin-top: 40px;
+  margin-top: 80px;
   margin-bottom: 60px;
+  position: relative;
 }
+
+.pagination::before {
+  position: absolute;
+  content: "";
+  width: 1060px;
+  height: 1px;
+  background-color:  #E6E6E6;
+  bottom: 100px;
+
+}
+
 
 .pagination-link {
   background-color: #82B3D3;
@@ -796,8 +898,8 @@ body {
   height: 60px ;
   padding: 12px 19px;
   text-align: center;
-  /* margin-right: 8px;; */
-
+  margin-right: 8px;
+  border-radius: 4px;
 }
 
 .pagination-link-no-color {
@@ -805,9 +907,7 @@ body {
   color: #000;
 }
 
-.pagination-item {
-  margin-right: 8px;
-}
+
 
 .pagination-current {
   color: #000;
@@ -838,12 +938,13 @@ body {
   background-image: url("../images/homepage_icon.svg");
   background-repeat: no-repeat;
   color: #FFF;
-  display: inline-block;
-  width: 13px;
-  height: 15px;
+  display: block;
+  width: 12px;
+  height: 12px;
   background-position: bottom;
-  margin-top: 3px;
-  margin-bottom: 3px;
+  /* padding-top: 3px; */
+  padding-bottom: 2px;
+
 }
 
 
