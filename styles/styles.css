@@ -102,15 +102,20 @@ margin-bottom: -6px;
   left: 16px;
   right: 16px;
   bottom: 0;
-
-
-
 }
+
+
+
 
 .navigation-link-list{
   padding: 20px 16px;
   display: inline-block;
 }
+
+.navigation-link-list:hover {
+  background-color: #E6E6E6;
+}
+
 
 .navigation-link-user {
   width: 44px;
@@ -191,6 +196,34 @@ button {
   border: none;
 }
 
+.button-blue:hover{
+background-color: #68A2CA;
+}
+
+.button-blue:active {
+  background-color: #68A2CA;
+  color: rgb(255,255,255, 0.3);
+  }
+
+.button-brown:hover{
+  background-color: #67544a;
+  }
+
+.button-brown:active {
+  background-color: #67544a;
+  color: rgb(255,255,255, 0.3);
+  }
+
+  .button-green:hover{
+  background-color: #65943d;
+    }
+
+  .button-green:active {
+  background-color: #65943d;
+    color: rgb(255,255,255, 0.3);
+    }
+
+
 .newsletter-form {
   display: flex;
 
@@ -235,6 +268,11 @@ button {
   background-color: #FFF;
   color: #000;
 }
+
+.button-catalog:hover {
+  border: 2px solid var(--icons-basic, #000);
+}
+
 
 
 .welcome {
@@ -560,6 +598,15 @@ margin-left: -30px;
   text-decoration: none;
 }
 
+.footer-telefon-number:hover {
+  color: #756157;
+}
+
+.footer-telefon-number:active {
+  color: #7561574D;
+}
+
+
 /* calatog.html */
 
 .filter-wrapper {
@@ -607,7 +654,17 @@ margin-left: -30px;
   padding: 0;
   align-self: center;
   margin-right: 28px;
+  cursor: pointer;
 }
+
+.breadcrumbs-link:hover{
+color: #FFFFFF99;
+}
+
+.breadcrumbs-link:active{
+  color: #FFFFFF4D;
+  }
+
 
 .breadcrumbs-item{
   position: relative;
@@ -620,7 +677,7 @@ margin-left: -30px;
   background-repeat: no-repeat;
   width: 8px;
   height: 11px;
-  top: 0;
+  top: 2px;
   right: 10px;
 }
 
@@ -757,6 +814,10 @@ margin-left: -30px;
   border: 2px solid #E5E5E5;
   width: 292px;
   margin-right: 70px;
+}
+
+.select-section-control:hover {
+  border: 2px solid var(--icons-basic, #000);
 }
 
 .product-card-select-view {
@@ -902,12 +963,19 @@ margin-right: 6px;
   border-radius: 4px;
 }
 
+.pagination-link:hover:not(.pagination-current,.pagination-link-no-color){
+  background-color: #68A2CA;
+  }
+
+.pagination-link:active {
+    background-color: #68A2CA;
+    color: rgb(255,255,255, 0.3);
+    }
+
 .pagination-link-no-color {
   background-color: #FFF;
   color: #000;
 }
-
-
 
 .pagination-current {
   color: #000;
@@ -939,10 +1007,8 @@ margin-right: 6px;
   background-repeat: no-repeat;
   color: #FFF;
   display: block;
-  width: 12px;
-  height: 12px;
-  background-position: bottom;
-  /* padding-top: 3px; */
+  width: 13px;
+  height: 15px;
   padding-bottom: 2px;
 
 }
