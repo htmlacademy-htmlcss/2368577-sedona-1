@@ -81,7 +81,6 @@ margin-bottom: -6px;
 }
 
 
-
 .navigation-link {
   font-size: 20px;
   font-weight: 700;
@@ -112,8 +111,13 @@ margin-bottom: -6px;
   display: inline-block;
 }
 
+
 .navigation-link-list:hover {
-  background-color: #E6E6E6;
+  color: #756157;
+}
+
+.navigation-link-list:active {
+  color: #7561574D;
 }
 
 
@@ -123,6 +127,14 @@ margin-bottom: -6px;
   display: inline-block;
   position: relative;
 
+}
+
+.navigation-link-user:hover {
+  fill: #756157;
+}
+
+.navigation-link-user:active {
+  fill: #7561574D;
 }
 
 /* .navigation-link .navigation-link-user .favorites {
@@ -262,6 +274,18 @@ background-color: #68A2CA;
   border: none;
 }
 
+.button-no-color-filters:hover{
+  border-radius: 4px;
+  border: 2px solid var(--buttons-blue-hover, #68A2CA);
+}
+
+  .button-no-color-filters:active {
+    border-radius: 4px;
+    border: 2px solid var(--forms-elements-1, #E5E5E5);
+    color: rgb(255,255,255, 0.3);
+
+    }
+
 .button-catalog {
   border-radius: 4px;
   border: 2px solid #E5E5E5;
@@ -296,6 +320,8 @@ background-color: #68A2CA;
   display: block;
   margin: 0 auto;
 }
+
+
 
 .text-section-container-advantages{
   margin: 0 auto;
@@ -532,12 +558,20 @@ margin-left: -30px;
   align-items: center;
 }
 
+.footer-logo:hover {
+  fill: #756157;
+}
+
+.footer-logo:active {
+  fill: #7561574D;
+}
+
 .footer-social {
   width: 142px;
   margin-right: 42px;
   align-items: center;
-  padding-top: 45px;
-  padding-bottom: 35px;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 .footer-social-list{
@@ -554,7 +588,16 @@ margin-left: -30px;
   width: 47px;
   height: 40px;
   text-align: center;
+  fill: #83B3D3;
 }
+
+.footer-social-item:hover{
+  fill: #68A2CA;
+  }
+
+  .footer-social-item:active {
+    fill: #68A2CA4D;
+  }
 
 .social-media {
   display: flex;
@@ -564,19 +607,19 @@ margin-left: -30px;
 
 .footer-telefon-number-container {
   width: 720px;
-  padding: 45px 194px 35px 195px;
-  position: relative;
+  padding: 40px 194px 30px 195px;
+  /* position: relative; */
 }
 
 
 .footer-logo-container {
   width: 156px;
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  padding: 8px 0 8px 41px;
+  padding: 40px 0 30px 41px;
 }
 
-.footer-logo-image {
+.footer-logo {
   display: block;
 }
 
