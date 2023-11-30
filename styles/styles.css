@@ -255,7 +255,282 @@ background-color: #68A2CA;
 
 .input-newsletter{
   width: 452px;
+  padding: 12px 20px;
+  border: 2px solid transparent;
+  border-radius: 4px 0 0 4px;
+font-family: PT Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+background-color: #F2F2F2;
+outline:none;
 }
+
+.input-newsletter:hover {
+  background-color: #E6E6E6;
+}
+
+.input-newsletter:focus{
+  border: 2px solid #83B3D3;
+  }
+
+.input-newsletter:active{
+  border: 2px solid #000;}
+
+.control-from, .control-to {
+  width: 143px;
+  padding: 12px 20px;
+  border: 2px solid transparent;
+  border-radius: 4px 0px 0px 4px;
+
+  background-color: #F2F2F2;
+  font-family: PT Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px;
+outline:none;
+}
+
+.control-from:hover, .control-to:hover {
+  background-color: #E6E6E6;
+}
+
+.control-from:focus, .control-to:focus{
+  border: 2px solid #83B3D3;
+  }
+
+.control-from:active, .control-to:active{
+  border: 2px solid #000;}
+
+.control-to {
+  border-radius: 0px 4px 4px 0px;
+}
+
+
+.control-select {
+  opacity: 0.3;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #FFF;
+
+}
+
+.control:hover .control-mark,
+.control:hover .control-label {
+  opacity: 0.6;
+}
+
+.control:active .control-mark,
+.control:active .control-label {
+  opacity: 0.3;
+}
+
+.control-input[type="checkbox"]:checked  + .control-mark::before  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-image: url(../images/tick.svg) ;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+ height: 20px;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  content: "";
+}
+
+.pop-up-form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.80);
+  z-index: 2;
+}
+
+/* .pop-up-form-container-close{
+  display: none;
+} */
+
+.pop-up-form {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  border-radius: 30px;
+  background: #FFF;
+  box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.15);}
+
+.pop-up-form-modal {
+  width: 717px;
+}
+
+.pop-up-form-close-button {
+  position: absolute;
+  padding: 0;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 50%;
+  background-image: url("../images/close_icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.pop-up-form-title {
+  font-family: PT Sans;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 36px;
+text-transform: uppercase;
+margin: 0;
+margin-bottom: 64px;
+}
+
+.search-form{
+  display: grid;
+  grid-template-columns: 247px 88px 242px;
+  row-gap: 48px;
+  justify-content: space-between;
+}
+
+.appointment-check-in {
+  grid-column: 1/-1;
+
+}
+
+.appointment-check-out {
+  grid-column: 1/-1;
+}
+
+.appointment-adult-visitors{
+  grid-column: 1/3;
+}
+
+.appointment-children-visitors{
+  grid-column: 3/4;
+}
+
+.form-label-info {
+  position: relative;
+  padding-right: 36px;
+}
+
+.form-label-info::after{
+  background-image: url(../images/info_icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: #82B3D3;
+  border-radius: 50%;
+  left: 60px;
+  top: 0;
+
+}
+
+.button-submit {
+  grid-column: 1/-1;
+  padding: 18px 77px;
+  border-radius: 10px;
+background: #83B3D3;
+border: none;
+}
+
+.form-label-text {
+  font-family: PT Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px;
+text-transform: capitalize;
+color: #000;
+}
+
+.check-date{
+width: 440px;
+padding: 12px 20px;
+border-radius: 4px;
+background: var(--basic-light, #F2F2F2);
+border: none;
+position: relative;
+}
+
+.check-date::before{
+  position: absolute;
+  background-image: url(../images/calendar.svg);
+background-repeat: no-repeat;
+content: "";
+right: 20px;
+width: 16px;
+height: 15px;
+}
+
+.
+
+.search-form input {
+  color: #000;
+font-family: PT Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px;
+}
+
+
+.check-visitors {
+  width: 110px;
+  border: none;
+  border-radius: 4px;
+background: #F2F2F2;
+padding: 14px 40px;
+appearance: none;
+}
+
+
+
+
+.field-group {
+  margin: 0;
+  padding: 0;
+}
+
 
 .button-green{
   background-color: #7DB54F;
@@ -876,11 +1151,56 @@ margin-left: -30px;
   border: 2px solid #E5E5E5;
   width: 292px;
   margin-right: 70px;
+  appearance: none;
+  padding: 12px 20px;
+  background-image: url(../images/down_arrow_icon.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  padding-right: 40px;
+  font: inherit;
 }
 
 .select-section-control:hover {
-  border: 2px solid var(--icons-basic, #000);
+  border-color: #68A2CA;
 }
+
+.select-section-control:active {
+  border-color: #3F5E72;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: #FFF;
+  opacity: 0.3;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #fff;
+  /* почему цвет полоски не меняется на белый? */
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: none;
+}
+
+.toggle-min {
+  top: -9px;
+  left: -3px;
+}
+
+.toggle-max {
+  top: -9px;
+  right: -3px;
+}
+
 
 .product-card-select-view {
   display: flex;

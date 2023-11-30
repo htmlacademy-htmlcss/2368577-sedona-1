@@ -73,17 +73,23 @@
             <ul class="catalog-filter-group">
               <li class="catalog-filter-list">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="pool" checked>Бассейн
+                  <input class=" visually-hidden  control-input" type="checkbox" name="pool" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Бассейн</span>
                 </label>
               </li>
               <li class="catalog-filter-list">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="parking" checked>Парковка
+                  <input class=" visually-hidden control-input" type="checkbox" name="parking" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Парковка</span>
                 </label>
               </li>
               <li class="catalog-filter-list">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="Wi-Fi">Wi-Fi
+                  <input class=" visually-hidden  control-input" type="checkbox" name="Wi-Fi">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Wi-Fi</span>
                 </label>
               </li>
             </ul>
@@ -93,34 +99,56 @@
           <ul class="catalog-filter-group">
             <li class="catalog-filter-list">
               <label class="control">
-                <input class="control-input" type="radio" name="catalog-group" value="hotel" checked>Гостиница
+                <input class=" visually-hidden control-input" type="radio" name="catalog-group" value="hotel" checked>
+                <span class="control-mark"></span>
+                <span class="control-label">Гостиница</span>
               </label>
             </li>
             <li class="catalog-filter-list">
               <label class="control">
-                <input class="control-input" type="radio" name="catalog-group" value="motel" >Мотель
+                <input class="visually-hidden control-input" type="radio" name="catalog-group" value="motel">
+                <span class="control-mark"></span>
+                <span class="control-label">Мотель</span>
               </label>
             </li>
             <li class="catalog-filter-list">
               <label class="control">
-                <input class="control-input" type="radio" name="catalog-group" value="apartments">Апартаменты
+                <input class="visually-hidden control-input" type="radio" name="catalog-group" value="apartments">
+                <span class="control-mark"></span>
+                <span class="control-label">Апартаменты</span>
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="catalog-filter-group price">
           <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-          <!-- как поставить текст "От До" внутрь инпутов? -->
-           <div class="control-range">
-          <label class="control">от<input class="control-from" type="text" value="0"></label>
-          <label class="control">до<input class="control-to" type="text" value="9000"></label>
-        </div>
-          <div class="range">
-            <div class="line"></div>
-            <!-- <div class="line-current"></div> -->
-            <button type="button"></button>
-            <button type="button"></button>
+
+
+        <div class="range">
+          <div class="control-range">
+            <label class="control-range-label"> <span class="control-select">от</span><input class="control-from" type="text" value="0"></label>
+            <label class="control-range-label"> <span class="control-select">до</span><input class="control-to" type="text" value="9000"></label>
           </div>
+          <div class="range-scale">
+            <div class="range-bar" style="right: 61px; width: 226px">
+              <button class="range-toggle toggle-min"></button>
+              <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                </svg>
+                <span class="visually-hidden">Изменить минимальную цену.</span>
+              </button>
+              <button class="range-toggle toggle-max">
+                <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                  </svg>
+                <span class="visually-hidden">Изменить максимальную цену.</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+
         </fieldset>
           <div class="catalog-filter-group buttons">
           <button class="button-blue button-blue-filters" type="submit">Применить</button>
@@ -298,5 +326,55 @@
         </div>
         </div>
     </footer>
+
+    <div class="pop-up-form-container pop-up-form-container-close">
+      <div class="pop-up-form pop-up-form-modal">
+        <button class="pop-up-form-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="pop-up-form-content">
+          <h2 class="pop-up-form-title">Поиск гостиницы в Седоне</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+
+              <p class="field-group appointment-check-in">
+                <label class="form-label" for="form-date-check-in"> <span class="form-label-text">Дата Заезда:</span></label>
+                <input class="check-date"  type="date" id="form-date-check-in" name="check-in-date" placeholder="27 апреля 2020" required>
+                <span class="check-in-date-info visually-hidden">Мы не можем отправить вас в прошлое.</span>
+              </p>
+              <p class="field-group appointment-check-out">
+                <label class="form-label" for="form-date-check-out"><span class="form-label-text">Дата Выезда:</span></label>
+                <input class="check-date"  type="date" id="form-date-check-out" name="check-out-date" placeholder="1 сентября 2021" required>
+                <span class="check-out-date-info visually-hidden" >На эти даты есть свободные номера. Пока есть.</span>
+              </p>
+
+                <p class="field-group appointment-adult-visitors">
+
+                <label class="form-label" for="adult-visitors"> <span class="form-label-text">Взрослые:</span></label>
+                <!-- <div class="adults"> -->
+                  <button class="button-less" type="button"></button>
+                <input class="check-visitors" type="number" id="adult-visitors" min="1" max="99" name="check-out-date" placeholder="2" required>
+                <button class="button-more" type="button"></button>
+              <!-- </div> -->
+              </p>
+
+
+              <p class="field-group appointment-children-visitors">
+
+                <label class="form-label form-label-info" for="children-visitors"><span class="form-label-text">Дети:</span></label>
+                <!-- <div class="children"> -->
+                <button class="button-less" type="button"></button>
+                <input class="check-visitors" type="number" id="children-visitors" min="1" max="99" placeholder="2" name="check-out-date" required >
+                <button class="button-more" type="button"></button>
+                 <!-- </div> -->
+                <span class="children-visitors-info visually-hidden">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </p>
+
+              <button class="button button-submit" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+
+    </div>
+
     </body>
     </html>
