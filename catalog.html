@@ -338,34 +338,40 @@
 
               <p class="field-group appointment-check-in">
                 <label class="form-label" for="form-date-check-in"> <span class="form-label-text">Дата Заезда:</span></label>
-                <input class="check-date"  type="date" id="form-date-check-in" name="check-in-date" placeholder="27 апреля 2020" required>
-                <span class="check-in-date-info visually-hidden">Мы не можем отправить вас в прошлое.</span>
+                <div class="date-form-wrapper">
+                <input class="check-date"  type="text" id="form-date-check-in" name="check-in-date" placeholder="27 апреля 2020" required>
+                <button class="calendar-button" type="button"></button>
+              </div>
+                <span class="check-in-date-info-red ">Мы не можем отправить вас в прошлое.</span>
               </p>
               <p class="field-group appointment-check-out">
                 <label class="form-label" for="form-date-check-out"><span class="form-label-text">Дата Выезда:</span></label>
-                <input class="check-date"  type="date" id="form-date-check-out" name="check-out-date" placeholder="1 сентября 2021" required>
-                <span class="check-out-date-info visually-hidden" >На эти даты есть свободные номера. Пока есть.</span>
+                <div class="date-form-wrapper">
+                  <input class="check-date"  type="text" id="form-date-check-out" name="check-out-date" placeholder="1 сентября 2021" required>
+                <button class="calendar-button" type="button"></button>
+                </div>
+                <span class="check-out-date-info " >На эти даты есть свободные номера. Пока есть.</span>
               </p>
 
                 <p class="field-group appointment-adult-visitors">
 
                 <label class="form-label" for="adult-visitors"> <span class="form-label-text">Взрослые:</span></label>
-                <!-- <div class="adults"> -->
+                <div class="visitors">
                   <button class="button-less" type="button"></button>
                 <input class="check-visitors" type="number" id="adult-visitors" min="1" max="99" name="check-out-date" placeholder="2" required>
                 <button class="button-more" type="button"></button>
-              <!-- </div> -->
+              </div>
               </p>
 
 
               <p class="field-group appointment-children-visitors">
 
                 <label class="form-label form-label-info" for="children-visitors"><span class="form-label-text">Дети:</span></label>
-                <!-- <div class="children"> -->
+                <div class="visitors">
                 <button class="button-less" type="button"></button>
                 <input class="check-visitors" type="number" id="children-visitors" min="1" max="99" placeholder="2" name="check-out-date" required >
                 <button class="button-more" type="button"></button>
-                 <!-- </div> -->
+                 </div>
                 <span class="children-visitors-info visually-hidden">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
               </p>
 

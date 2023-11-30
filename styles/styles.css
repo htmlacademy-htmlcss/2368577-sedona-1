@@ -308,9 +308,16 @@ outline:none;
   border-radius: 0px 4px 4px 0px;
 }
 
+.control-range-label{
+  position: relative;
+}
 
 .control-select {
   opacity: 0.3;
+  position: absolute;
+  content: "";
+  right: 20px;
+  top: 15px;
 }
 
 .control {
@@ -422,7 +429,7 @@ margin-bottom: 64px;
 }
 
 .search-form{
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 247px 88px 242px;
   row-gap: 48px;
   justify-content: space-between;
@@ -489,20 +496,77 @@ padding: 12px 20px;
 border-radius: 4px;
 background: var(--basic-light, #F2F2F2);
 border: none;
-position: relative;
+/* position: relative; */
 }
 
-.check-date::before{
+/* .check-date::before{
   position: absolute;
   background-image: url(../images/calendar.svg);
 background-repeat: no-repeat;
 content: "";
+top: 0;
 right: 20px;
 width: 16px;
 height: 15px;
+} */
+
+.date-form-wrapper{
+  position: relative;
 }
 
-.
+.calendar-button{
+  position: absolute;
+  background-image: url(../images/calendar.svg);
+background-repeat: no-repeat;
+content: "";
+top: 17px;
+right: 20px;
+width: 20px;
+height: 20px;
+border: none;
+}
+
+.visitors  {
+  position: relative;
+  width: 110px;
+}
+
+.check-in-date-info-red {
+  color: #FF5757;
+  padding: 0 20px;
+}
+
+.check-out-date-info{
+  padding: 0 20px;
+}
+
+.button-less{
+  position: absolute;
+  background-image: url(../images/button-minus.svg);
+background-repeat: no-repeat;
+background-position: center;
+background-color: transparent;
+content: "";
+top: 17px;
+left: 10px;
+width: 20px;
+height: 20px;
+border: none;
+}
+
+.button-more{
+  position: absolute;
+  background-image: url(../images/button-plus.svg);
+background-repeat: no-repeat;
+background-position: center;
+background-color: transparent;
+content: "";
+top: 17px;
+right: 10px;
+width: 20px;
+height: 20px;
+border: none;
+}
 
 .search-form input {
   color: #000;
@@ -669,7 +733,7 @@ appearance: none;
 
 .text-section-button{
   display: inline-block;
-  padding: 8px 50px;
+  padding: 15px 50px;
 }
 
 .newsletter-with-background .main-text,
@@ -1171,15 +1235,15 @@ margin-left: -30px;
 .range-scale {
   position: relative;
   height: 4px;
-  background-color: #FFF;
-  opacity: 0.3;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .range-bar {
   position: absolute;
   height: 4px;
   background-color: #fff;
-  /* почему цвет полоски не меняется на белый? */
+  top: 0;
+  left: 0;
 }
 
 .range-toggle {
