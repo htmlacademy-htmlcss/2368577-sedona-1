@@ -126,18 +126,18 @@
 
         <div class="range">
           <div class="control-range">
-            <label class="control-range-label"> <span class="control-select">от</span><input class="control-from" type="text" value="0"></label>
-            <label class="control-range-label"> <span class="control-select">до</span><input class="control-to" type="text" value="9000"></label>
+            <label class="control-range-label"> <span class="control-select">от</span><input required class="control-from" name="стоимость от" type="text" value="0"></label>
+            <label class="control-range-label"> <span class="control-select">до</span><input required class="control-to" name="стоимость до" type="text" value="9000"></label>
           </div>
           <div class="range-scale">
             <div class="range-bar" style="right: 61px; width: 226px">
-              <button class="range-toggle toggle-min"></button>
+              <button type="button" class="range-toggle toggle-min"></button>
               <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                 </svg>
                 <span class="visually-hidden">Изменить минимальную цену.</span>
               </button>
-              <button class="range-toggle toggle-max">
+              <button type="button" class="range-toggle toggle-max">
                 <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                   </svg>
@@ -258,6 +258,7 @@
         </li>
         <li>
           <a class="pagination-link pagination-link-no-color" href="#">...</a>
+          <span class="visually-hidden" >промежуток между кнопками пагинации</span>
         </li>
         <li>
           <a class="pagination-link" href="#">10</a>
@@ -269,8 +270,8 @@
       <h2 class="main-text">Подпишитесь на рассылку</h2>
       <p class="under-text under-text-newsletter">Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form action="https://echo.htmlacademy.ru/" class="newsletter-form" method="post">
-        <label class="newsletter-form-label" for="email-form"></label>
-        <input type="email" id="email-form" placeholder="Ваш e-mail" class="input-newsletter">
+        <label class="newsletter-form-label" for="email-form"><span class="visually-hidden">Ваш e-mail</span></label>
+        <input required type="email" id="email-form" placeholder="Ваш e-mail" class="input-newsletter">
         <button class="button-blue button-blue-newsletter" name="subscribe">Подписаться</button>
       </form>
     </div>
@@ -309,6 +310,7 @@
         </div>
         <div class="footer-logo-container">
           <a class="footer-logo" href="https://htmlacademy.ru/">
+            <span class="visually-hidden" >логотип HTML академии</Html></span>
             <svg aria-hidden="true" focusable="false" width="115" height="34" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M0 13.7232V16.3232H2.5V13.7232H0Z" />
               <path d="M11.6 5.32324C10 5.32324 8.8 6.02324 8 7.02324H7.9V0.823242H5.9V16.3232H7.9V11.0232C7.9 8.92324 9.2 7.42324 11.2 7.42324C13 7.42324 14.1 8.82324 14.1 10.6232V16.3232H16.1V10.2232C16.2 7.22324 14.3 5.32324 11.6 5.32324Z" />
@@ -329,7 +331,7 @@
 
     <div class="pop-up-form-container pop-up-form-container-close">
       <div class="pop-up-form pop-up-form-modal">
-        <button class="pop-up-form-close-button">
+        <button type="button" class="pop-up-form-close-button">
           <span class="visually-hidden">Закрыть</span>
           <svg width="15" height="15" aria-hidden="true" focusable="false"  xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z"/>
@@ -339,43 +341,43 @@
           <h2 class="pop-up-form-title">Поиск гостиницы в Седоне</h2>
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
 
-              <p class="field-group appointment-check-in">
+              <div class="field-group appointment-check-in">
                 <label class="form-label" for="form-date-check-in"> <span class="form-label-text">Дата Заезда:</span></label>
                 <div class="date-form-wrapper">
                 <input class="check-date"  type="text" id="form-date-check-in" name="check-in-date" placeholder="27 апреля 2020" required>
-                <button class="calendar-button" type="button"></button>
+                <button class="calendar-button" type="button"></button> <span class="visually-hidden" >иконка Календарь</span>
               </div>
                 <span class="check-in-date-info-red ">Мы не можем отправить вас в прошлое.</span>
-              </p>
-              <p class="field-group appointment-check-out">
+            </div>
+              <div class="field-group appointment-check-out">
                 <label class="form-label" for="form-date-check-out"><span class="form-label-text">Дата Выезда:</span></label>
                 <div class="date-form-wrapper">
                   <input   class="check-date"  type="text" id="form-date-check-out" name="check-out-date" placeholder="1 сентября 2021" required>
-                <button class="calendar-button" type="button"></button>
+                <button class="calendar-button" type="button"></button> <span class="visually-hidden" >иконка Календарь</span>
                 </div>
                 <span class="check-out-date-info " >На эти даты есть свободные номера. Пока есть.</span>
-              </p>
+              </div>
 
-                <p class="field-group appointment-adult-visitors">
-
-                <label class="form-label" for="adult-visitors"> <span class="form-label-text">Взрослые:</span></label>
+                <div class="field-group appointment-adult-visitors">
+                <label class="form-label form-label-adults" for="adult-visitors"> <span class="form-label-text">Взрослые:</span></label>
                 <div class="visitors">
-                  <button class="button-less" type="button">
+                  <button class="button-less-more button-less" type="button">
                     <svg width="14" height="2" xmlns="http://www.w3.org/2000/svg">
                       <path id="Vector" d="M0 0L0 2L14 2V0L0 0Z" />
                       </svg>
                   </button>
+                  <span class="visually-hidden" >кнопка убавить количество</span>
                 <input class="check-visitors" type="number" id="adult-visitors" min="1" max="99" name="check-out-date" placeholder="2" required>
-                <button class="button-more" type="button">
+                <button class="button-less-more button-more" type="button">
                   <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
                     </svg>
                 </button>
+                <span class="visually-hidden" >кнопка прибавить количество</span>
               </div>
-              </p>
+            </div>
 
-
-              <p class="field-group appointment-children-visitors">
+              <div class="field-group appointment-children-visitors">
                 <span class="form-label-info">
                 <label class="form-label form-label-info" for="children-visitors">
                   <span class="form-label-text">Дети:</span>
@@ -390,20 +392,22 @@
                 </span>
               </span>
                 <div class="visitors">
-                <button class="button-less" type="button">
+                <button class=" button-less-more button-less" type="button">
                   <svg width="14" height="2" xmlns="http://www.w3.org/2000/svg">
                     <path id="Vector" d="M0 0L0 2L14 2V0L0 0Z" />
                     </svg>
                 </button>
+                <span class="visually-hidden" >кнопка убавить количество</span>
                 <input class="check-visitors" type="number" id="children-visitors" min="1" max="99" placeholder="2" name="check-out-date" required >
-                <button class="button-more" type="button">
+                <button class=" button-less-more button-more" type="button">
                   <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
                     </svg>
                 </button>
+                <span class="visually-hidden" >кнопка прибавить количество</span>
                  </div>
                 <span class="children-visitors-info visually-hidden">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-              </p>
+                </div>
 
               <button class="button button-submit" type="submit">Найти</button>
           </form>
