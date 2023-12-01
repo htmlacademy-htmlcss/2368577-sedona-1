@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="../images/favicon.ico">
   </head>
   <body>
     <header class="page-header">
@@ -134,8 +135,8 @@
               <h2 class="main-text">Подпишитесь на рассылку</h2>
               <p class="under-text under-text-newsletter">Только полезная информация и никакого спама, честное бойскаутское!</p>
               <form action="https://echo.htmlacademy.ru/" class="newsletter-form" method="post">
-                <label class="newsletter-form-label" for="email-form"></label>
-                <input type="email" id="email-form" placeholder="Ваш e-mail" class="input-newsletter">
+                <label class="newsletter-form-label" for="email-form"><span class="visually-hidden">Ваш e-mail</span></label>
+                <input required type="email" id="email-form" placeholder="Ваш e-mail" class="input-newsletter">
                 <button class="button-blue button-blue-newsletter" name="subscribe">Подписаться</button>
               </form>
             </div>
@@ -191,5 +192,92 @@
         </div>
         </div>
     </footer>
+
+    <div class="pop-up-form-container pop-up-form-container-close">
+      <div class="pop-up-form pop-up-form-modal">
+        <button type="button" class="pop-up-form-close-button">
+          <span class="visually-hidden">Закрыть</span>
+          <svg width="15" height="15" aria-hidden="true" focusable="false"  xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z"/>
+            </svg>
+        </button>
+        <section class="pop-up-form-content">
+          <h2 class="pop-up-form-title">Поиск гостиницы в Седоне</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+
+              <div class="field-group appointment-check-in">
+                <label class="form-label" for="form-date-check-in"> <span class="form-label-text">Дата Заезда:</span></label>
+                <div class="date-form-wrapper">
+                <input class="check-date"  type="text" id="form-date-check-in" name="check-in-date" placeholder="27 апреля 2020" required>
+                <button class="calendar-button" type="button"></button> <span class="visually-hidden" >иконка Календарь</span>
+              </div>
+                <span class="check-in-date-info-red ">Мы не можем отправить вас в прошлое.</span>
+            </div>
+              <div class="field-group appointment-check-out">
+                <label class="form-label" for="form-date-check-out"><span class="form-label-text">Дата Выезда:</span></label>
+                <div class="date-form-wrapper">
+                  <input   class="check-date"  type="text" id="form-date-check-out" name="check-out-date" placeholder="1 сентября 2021" required>
+                <button class="calendar-button" type="button"></button> <span class="visually-hidden" >иконка Календарь</span>
+                </div>
+                <span class="check-out-date-info " >На эти даты есть свободные номера. Пока есть.</span>
+              </div>
+
+                <div class="field-group appointment-adult-visitors">
+                <label class="form-label form-label-adults" for="adult-visitors"> <span class="form-label-text">Взрослые:</span></label>
+                <div class="visitors">
+                  <button class="button-less-more button-less" type="button">
+                    <svg width="14" height="2" xmlns="http://www.w3.org/2000/svg">
+                      <path id="Vector" d="M0 0L0 2L14 2V0L0 0Z" />
+                      </svg>
+                  </button>
+                  <span class="visually-hidden" >кнопка убавить количество</span>
+                <input class="check-visitors" type="number" id="adult-visitors" min="1" max="99" name="check-out-date" placeholder="2" required>
+                <button class="button-less-more button-more" type="button">
+                  <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
+                    </svg>
+                </button>
+                <span class="visually-hidden" >кнопка прибавить количество</span>
+              </div>
+            </div>
+
+              <div class="field-group appointment-children-visitors">
+                <span class="form-label-info">
+                <label class="form-label form-label-info" for="children-visitors">
+                  <span class="form-label-text">Дети:</span>
+                </label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button">
+                    <svg class="tooltip-icon" width="2" height="12"  fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
+                      </svg>
+                  </button>
+                  <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </span>
+                <div class="visitors">
+                <button class=" button-less-more button-less" type="button">
+                  <svg width="14" height="2" xmlns="http://www.w3.org/2000/svg">
+                    <path  d="M0 0L0 2L14 2V0L0 0Z" />
+                    </svg>
+                </button>
+                <span class="visually-hidden" >кнопка убавить количество</span>
+                <input class="check-visitors" type="number" id="children-visitors" min="1" max="99" placeholder="2" name="check-out-date" required >
+                <button class=" button-less-more button-more" type="button">
+                  <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
+                    </svg>
+                </button>
+                <span class="visually-hidden" >кнопка прибавить количество</span>
+                 </div>
+                <span class="children-visitors-info visually-hidden">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </div>
+
+              <button class="button button-submit" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
   </body>
 </html>
