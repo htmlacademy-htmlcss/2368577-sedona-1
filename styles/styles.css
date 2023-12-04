@@ -173,10 +173,10 @@ body {
   width: 20px;
   height: 20px;
   position: absolute;
-  top: -35%;
+  top: -55%;
   right: 0;
   bottom: 0;
-  left: 45%;
+  left: 36%;
   margin: auto;
   display: flex;
   align-items: center;
@@ -213,6 +213,19 @@ button {
   border: none;
 }
 
+.button-blue-newsletter {
+  width: 232px;
+  padding: 8px 50px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  font-family: PT Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 36px;
+text-transform: uppercase;
+}
+
 .button-blue:hover{
 background-color: #68A2CA;
 }
@@ -246,12 +259,7 @@ background-color: #68A2CA;
 
 }
 
-.button-blue-newsletter {
-  width: 232px;
-  padding: 8px 50px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
+
 
 .input-newsletter{
   width: 452px;
@@ -811,7 +819,7 @@ background-color: #E6E6E6;
 .text-section-container-advantages{
   margin: 0 auto;
   padding-top: 69px;
-  padding-bottom: 69px;
+  padding-bottom: 90px;
   width: 685px;
 }
 
@@ -852,10 +860,12 @@ background-color: #E6E6E6;
   line-height: 36px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-
+.main-text-advantages  {
+  margin-bottom: 25px;
+}
 
 .under-text {
   color: #333;
@@ -872,7 +882,13 @@ background-color: #E6E6E6;
 
 .text-section-button{
   display: inline-block;
-  padding: 15px 50px;
+  padding: 8px 50px;
+  font-family: PT Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 36px;
+text-transform: uppercase;
 }
 
 .newsletter-with-background .main-text,
@@ -900,7 +916,7 @@ content: "";
 width: 60px;
 height: 2px;
 background-color: rgba(255, 255, 255, 0.30);
-bottom: -35px;
+bottom: -32px;
 left: 50%;
 margin-left: -30px;
 }
@@ -911,7 +927,7 @@ content: "";
 width: 60px;
 height: 2px;
 background-color: rgba(0, 0, 0, 0.30);
-bottom: -35px;
+bottom: -32px;
 left: 50%;
 margin-left: -30px;
 }
@@ -1041,6 +1057,7 @@ margin-left: -30px;
   margin: 0 auto;
   padding: 0 70px;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .footer-logo:hover {
@@ -1056,7 +1073,7 @@ margin-left: -30px;
   margin-right: 42px;
   align-items: center;
   padding-top: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .footer-social-list{
@@ -1092,7 +1109,7 @@ margin-left: -30px;
 
 .footer-telefon-number-container {
   width: 720px;
-  padding: 40px 194px 30px 195px;
+  padding: 40px 194px 20px 195px;
 
 }
 
@@ -1101,7 +1118,7 @@ margin-left: -30px;
   width: 156px;
 
   align-items: center;
-  padding: 40px 0 30px 41px;
+  padding: 48px 0 30px 41px;
 }
 
 .footer-logo {
@@ -1166,7 +1183,7 @@ margin-left: -30px;
 
 .breadcrumbs{
   display: flex;
-  flex-direction: wrap;
+  flex-wrap: wrap;
   min-width: 114px;
   margin: 0;
   margin-bottom: 40px;
@@ -1605,7 +1622,7 @@ background-repeat: space;
 .service-image-gift{
   background-image: url("../images/gift_icon.svg");
   background-repeat: no-repeat;
-  background-position: center 81px;
+  background-position: center 79px;
 }
 
 .breadcrumbs-image{
