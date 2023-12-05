@@ -288,7 +288,7 @@ outline:none;
 
 .control-from, .control-to {
   width: 143px;
-  padding: 12px 20px;
+  padding: 10px 20px;
   border: 2px solid transparent;
   border-radius: 4px 0px 0px 4px;
 
@@ -401,6 +401,7 @@ outline:none;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.80);
   z-index: 2;
+
 }
 
 .pop-up-form-container-close{
@@ -591,12 +592,20 @@ display: none;
 }
 
 .button-submit {
+  color: var(--basic-white, #FFF);
   grid-column: 1/-1;
-  padding: 18px 77px;
+  padding: 16px 77px;
   border-radius: 10px;
 background: #83B3D3;
 border: none;
-margin-top: 20px;
+margin-top: 16px;
+text-align: center;
+font-family: PT Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px;
+text-transform: uppercase;
 }
 
 .button-submit:hover{
@@ -651,16 +660,22 @@ background-color: transparent;
   width: 110px;
 }
 
-.check-in-date-info-red {
-  color: #FF5757;
+.check-date-info{
   padding: 0 20px;
   margin-left: 137px;
+  font-family: PT Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
 }
 
-.check-out-date-info{
-  padding: 0 20px;
-  margin-left: 137px;
+
+.check-date-info-red {
+  color: #FF5757;
 }
+
+
 
 .button-less-more{
   position: absolute;
@@ -1160,7 +1175,7 @@ margin-left: -30px;
   background-color: #646d76;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 35px 70px 70px;
+  padding: 35px 70px 65px;
 
 }
 
@@ -1340,6 +1355,7 @@ margin-left: -30px;
   line-height: 24px;
   text-transform: capitalize;
   margin-bottom: 32px;
+  padding: 0;
 }
 
 .catalog-filter-list{
@@ -1361,6 +1377,7 @@ margin-left: -30px;
   line-height: 36px;
   text-transform: uppercase;
   margin-right: 200px;
+  align-self: center;
 }
 
 .product-card-select-section-preview{
@@ -1369,6 +1386,10 @@ margin-left: -30px;
   font-style: normal;
   font-weight: 400;
   line-height: 21px;
+}
+
+.product-card-image{
+  display: block;
 }
 
 .select-section-control{
@@ -1397,6 +1418,7 @@ margin-left: -30px;
   position: relative;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
+  top: 8px;
 }
 
 .range-bar {
@@ -1419,12 +1441,12 @@ margin-left: -30px;
 
 .toggle-min {
   top: -9px;
-  left: -3px;
+  left: 0;
 }
 
 .toggle-max {
   top: -9px;
-  right: -3px;
+  right: 0;
 }
 
 
