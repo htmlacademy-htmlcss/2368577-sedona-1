@@ -201,6 +201,7 @@ body {
 button {
   cursor: pointer;
   border-radius: 4px;
+  font-family: PT Sans;
 }
 
 .button-blue {
@@ -412,9 +413,9 @@ button {
 
 }
 
-/* .pop-up-form-container-close {
+.pop-up-form-container-close {
   display: none;
-} */
+}
 
 .pop-up-form {
   position: relative;
